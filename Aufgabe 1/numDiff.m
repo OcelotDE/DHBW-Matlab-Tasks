@@ -1,34 +1,29 @@
 function y = numDiff(func, x, Method)
-%FUNCTION_NAME - One line description of what the function or script performs (H1 line)
-%Optional file header info (to give more details about the function than in the H1 line)
-%Optional file header info (to give more details about the function than in the H1 line)
-%Optional file header info (to give more details about the function than in the H1 line)
+%numDiff - Calculates the numerical y value using differentials
 %
-% Syntax:  [output1,output2] = function_name(input1,input2,input3)
+% Syntax:  y = numDiff(func, x, Method)
 %
 % Inputs:
 %    func - The function of which the zeropoint needs to be calculated
 %    x - The current x value of which the tangent needs to be calculated
+%    Method - The method that is being using to determine y
 %
 % Outputs:
 %    y - The y-value of the calculated tangent's x value
 %
 % Example: 
-%    Line 1 of example
-%    Line 2 of example
-%    Line 3 of example
+%    numDiff(f, 2, 'Forward')
 %
 % Other m-files required: none
 % Subfunctions: none
 % MAT-files required: none
 %
-% See also: OTHER_FUNCTION_NAME1,  OTHER_FUNCTION_NAME2
 
 % Author: Marlon Oberberger
 % Work address
 % email: inf21109@lehre.dhbw-stuttgart.de
 % Website: N/A
-% March 2023; Last revision: 12-May-2004
+% March 2023; Last revision: 23-March-2023
 
 %------------- BEGIN CODE --------------
 
