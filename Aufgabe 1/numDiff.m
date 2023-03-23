@@ -34,10 +34,10 @@ switch Method
         y = (func(x + h) - func(x)) / h;
     case 'Backward'
         h = 10^(-8);
-        y = (func(x) - func(x - h)) / h
+        y = (func(x) - func(x - h)) / h;
     case 'Central'
         h = 10^(-6);
-        y = (func(x + h) - func(x - h)) / (2*h)
+        y = (func(x + h) - func(x - h)) / (2*h);
 end
 
 %------------- END OF CODE --------------
