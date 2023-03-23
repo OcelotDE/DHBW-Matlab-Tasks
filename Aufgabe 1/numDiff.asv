@@ -1,4 +1,4 @@
-function y = my_poly(x)
+function y = numDiff(func, x)
 %FUNCTION_NAME - One line description of what the function or script performs (H1 line)
 %Optional file header info (to give more details about the function than in the H1 line)
 %Optional file header info (to give more details about the function than in the H1 line)
@@ -7,13 +7,11 @@ function y = my_poly(x)
 % Syntax:  [output1,output2] = function_name(input1,input2,input3)
 %
 % Inputs:
-%    input1 - Description
-%    input2 - Description
-%    input3 - Description
+%    func - The function of which the zeropoint needs to be calculated
+%    x - The 
 %
 % Outputs:
-%    output1 - Description
-%    output2 - Description
+%    y - The y-value of the calculated tangent's x value
 %
 % Example: 
 %    Line 1 of example
@@ -26,20 +24,18 @@ function y = my_poly(x)
 %
 % See also: OTHER_FUNCTION_NAME1,  OTHER_FUNCTION_NAME2
 
-% Author: FirstName FamilyName
+% Author: Marlon Oberberger
 % Work address
-% email: 
-% Website: http://www.
-% May 2004; Last revision: 12-May-2004
+% email: inf21109@lehre.dhbw-stuttgart.de
+% Website: N/A
+% March 2023; Last revision: 12-May-2004
 
 %------------- BEGIN CODE --------------
 
-y = (x-3)^2;
+h = 10^(-8)
+
+%calculate D+f with given funtion and x0 value
+y = (func(x + h) - func(x)) / h
 
 %------------- END OF CODE --------------
-%Please send suggestions for improvement of the above template header 
-%to Denis Gilbert at this email address: gilbertd@dfo-mpo.gc.ca.
-%Your contribution towards improving this template will be acknowledged in
-%the "Changes" section of the TEMPLATE_HEADER web page on the Matlab
-%Central File Exchange
 end
