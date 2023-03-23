@@ -86,7 +86,7 @@ for i = 1:maxIter
     if exist('dfunc', 'var')
         df = dfunc(xOld);
     else
-        df = numDiff(func, xOld, method)
+        df = numDiff(func, xOld, method);
     end
     if df == 0
         abortFlag = 'df = 0';
