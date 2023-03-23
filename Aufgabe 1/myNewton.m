@@ -48,6 +48,14 @@ if ~exist('livePlot','var')
     disp(['Using default live Plot: livePlot = ','off']);
 end
 
+if ~exist('dfunc', 'var')
+    %% differential procedure selection once
+
+        method = questdlg('Choose a method', ...
+	        'Differential procedure menu', ...
+	        'Forward', 'Backward', 'Central', 'Central');
+end
+
 %% start of algorithm
 if strcmp(livePlot,'on')
    h = figure('Name','Newton visualization');
@@ -77,16 +85,12 @@ for i = 1:maxIter
     end
     if exist('dfunc', 'var')
         df = dfunc(xOld);
-        if df == 0
-            abortFlag = 'df = 0';
-            break;
-        end
     else
-        df = numDiff(func, xOld)
-        if df == 0
-            abortFlag = 'df = 0'
-            break;
-        end
+        df = numDiff(func, xOld, method)
+    end
+    if df == 0
+        abortFlag = 'df = 0';
+        break;
     end
     xNew = xOld - f/df; 
     if abs(xNew-xOld) < xeps

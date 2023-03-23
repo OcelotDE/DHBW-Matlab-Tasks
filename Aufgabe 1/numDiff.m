@@ -1,4 +1,4 @@
-function y = numDiff(func, x)
+function y = numDiff(func, x, Method)
 %FUNCTION_NAME - One line description of what the function or script performs (H1 line)
 %Optional file header info (to give more details about the function than in the H1 line)
 %Optional file header info (to give more details about the function than in the H1 line)
@@ -32,11 +32,18 @@ function y = numDiff(func, x)
 
 %------------- BEGIN CODE --------------
 
-% default h value is ten to the power of minus eight
-h = 10^(-8)
-
-% calculate D+f with given funtion and x0 value
-y = (func(x + h) - func(x)) / h
+% method selection
+switch Method
+    case 'Forward'
+        h = 10^(-8);
+        y = (func(x + h) - func(x)) / h;
+    case 'Backward'
+        h = 10^(-8);
+        y = (func(x) - func(x - h)) / h
+    case 'Central'
+        h = 10^(-6);
+        y = (func(x + h) - func(x - h)) / (2*h)
+end
 
 %------------- END OF CODE --------------
 end

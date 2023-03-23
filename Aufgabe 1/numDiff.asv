@@ -1,4 +1,4 @@
-function y = numDiff(func, x)
+function y = numDiff(func, x, Method)
 %FUNCTION_NAME - One line description of what the function or script performs (H1 line)
 %Optional file header info (to give more details about the function than in the H1 line)
 %Optional file header info (to give more details about the function than in the H1 line)
@@ -8,7 +8,7 @@ function y = numDiff(func, x)
 %
 % Inputs:
 %    func - The function of which the zeropoint needs to be calculated
-%    x - The 
+%    x - The current x value of which the tangent needs to be calculated
 %
 % Outputs:
 %    y - The y-value of the calculated tangent's x value
@@ -32,9 +32,23 @@ function y = numDiff(func, x)
 
 %------------- BEGIN CODE --------------
 
+% Handle response
+        switch answer
+            case 'Forward'
+                disp([answer ' coming right up.'])
+                dessert = 1;
+            case 'Backward'
+                disp([answer ' coming right up.'])
+                dessert = 2;
+    case 'Central'
+        disp('I''ll bring you your check.')
+        dessert = 0;
+end
+
+% default h value is ten to the power of minus eight
 h = 10^(-8)
 
-%calculate D+f with given funtion and x0 value
+% calculate D+f with given funtion and x0 value
 y = (func(x + h) - func(x)) / h
 
 %------------- END OF CODE --------------
