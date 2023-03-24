@@ -4,13 +4,15 @@ function [xZero, abortFlag, iters] = myNewton(varargin)
 % Syntax:  [xZero, abortFlag, iters] = myNewton(varargin)
 %
 % Inputs:
-%    varargin - arguments for the calculations
+%    func - The function of which the zeropoint needs to be calculated
+%    x - The current x value of which the tangent needs to be calculated
+%    Method - The method that is being using to determine y
 %
 % Outputs:
-%    xZero - zeropoint of a given function
+%    y - The y-value of the calculated tangent's x value
 %
 % Example: 
-%    myNewton('function', @myPoly)
+%    myNewton()
 %
 % Other m-files required: none
 % Subfunctions: none

@@ -40,5 +40,6 @@ switch Method
         y = (func(x + h) - func(x - h)) / (2*h);
 end
 
-%------------- END OF CODE --------------
 end
+
+%------------- END OF CODE --------------
