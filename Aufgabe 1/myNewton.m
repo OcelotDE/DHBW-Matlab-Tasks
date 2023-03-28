@@ -4,7 +4,13 @@ function [xZero, abortFlag, iters] = myNewton(varargin)
 % Syntax:  [xZero, abortFlag, iters] = myNewton(varargin)
 %
 % Inputs:
-%    varargin - arguments for the calculations
+%    function - a function for the zeropoint to be calculated
+%    derivative - the derivative function to the given function
+%    startValue - the starting value for the newton algorithm
+%    maxIter - maximum interation value for the newton algorithm
+%    feps - tolerance for the function value
+%    xeps - tolerance for the change in the root estimate
+%    livePlot - wheter a plot should be drawn or not
 %
 % Outputs:
 %    xZero - zeropoint of a given function
