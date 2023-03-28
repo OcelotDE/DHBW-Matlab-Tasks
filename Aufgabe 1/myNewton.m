@@ -1,7 +1,7 @@
 function [xZero, abortFlag, iters] = myNewton(varargin)
 %myNewton - Calculates the zeropoint for a given function
 %
-% Syntax:  [xZero, abortFlag, iters] = myNewton(varargin)
+% Syntax:  [xZero, abortFlag, iters] = myNewton('function', func, 'derivative', dfunc, 'startValue', x0, 'maxIter', maxIter, 'feps', feps, 'xeps', xeps, 'livePlot', livePlot)
 %
 % Inputs:
 %    function - a function for the zeropoint to be calculated
