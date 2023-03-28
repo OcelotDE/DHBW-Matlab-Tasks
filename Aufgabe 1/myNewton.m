@@ -14,6 +14,8 @@ function [xZero, abortFlag, iters] = myNewton(varargin)
 %
 % Outputs:
 %    xZero - zeropoint of a given function
+%    abortFlag - wheter the iteration got aborted early
+%    iters - amount of iterations
 %
 % Example: 
 %    myNewton('function', @myPoly)
