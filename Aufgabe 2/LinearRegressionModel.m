@@ -88,7 +88,7 @@ classdef LinearRegressionModel < matlab.mixin.SetGet
             
             % ========= YOUR CODE HERE =========
             % compute the costs for each theta_vals tuple
-            [theta0Grid, theta1Grid] = meshgrid(theta0_vals, theta1_vals);
+            [theta0_grid, theta1_grid] = meshgrid(theta0_vals, theta1_vals);
             costVals = zeros(length(theta0_vals), length(theta1_vals));
             for i = 1:length(theta0_vals)
                 for j = 1:length(theta1_vals)
@@ -99,7 +99,7 @@ classdef LinearRegressionModel < matlab.mixin.SetGet
             
         
             % plot the costs with the surf command
-            surf(theta0Grid, theta1Grid, costVals);
+            surf(theta0_grid, theta1_grid, costVals);
             % add x and y label
             xlabel('\theta_0');
             ylabel('\theta_1');
