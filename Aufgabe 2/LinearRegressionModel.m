@@ -69,7 +69,7 @@ classdef LinearRegressionModel < matlab.mixin.SetGet
             
             
             % plot the costs with the contour command
-            contour(theta0_grid, theta1_grid, costVals,20);
+            contour(theta0_grid, theta1_grid, costVals, 20);
 
             % add x and y label
             xlabel('\theta_0');
