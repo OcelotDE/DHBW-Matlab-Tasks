@@ -1,3 +1,12 @@
+%% LinearRegressionModel: 
+% represents the implementation of the linear regression model
+%
+% See also: LinearRegressionDataFormatter, GradientDescentOptimizer
+% Author: Marlon Oberberger
+% DHBW Stuttgart
+% email: inf21109@lehre.dhbw-stuttgart.de
+% data: Q2 2023
+
 classdef LinearRegressionModel < matlab.mixin.SetGet
     %LINEARREGRESSIONMODEL 
     % Class representing an implementation of linear regression model

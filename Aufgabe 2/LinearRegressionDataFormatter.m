@@ -1,3 +1,12 @@
+%% LinearRegressionDataFormatter: 
+% models the training data for a linear regression model object
+%
+% See also: GradientDescentOptimizer, LinearRegressionModel
+% Author: Marlon Oberberger
+% DHBW Stuttgart
+% email: inf21109@lehre.dhbw-stuttgart.de
+% data: Q2 2023
+
 classdef LinearRegressionDataFormatter < matlab.mixin.SetGet
     %DATAPRERPERATOR Class to model the training data for lineare
     %regression model object
