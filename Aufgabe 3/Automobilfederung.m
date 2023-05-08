@@ -71,12 +71,12 @@ classdef Automobilfederung < handle
                 end
                 % ========= YOUR CODE HERE =========
                 % calculate the slopes
-                k1 = rhs(obj,t,y);
-                k2 = rhs(obj,t + (0.5*h), y+ ((h/2) * k1') );
-                k3 = rhs(obj,t + (0.5*h), y+ (0.5*h*k2') );
-                k4 = rhs(obj,t + h, y+ (h*k3'));
+                k_1 = rhs(obj,t,y);
+                k_2 = rhs(obj,t + (0.5*h), y+ ((h/2) * k_1') );
+                k_3 = rhs(obj,t + (0.5*h), y+ (0.5*h*k_2') );
+                k_4 = rhs(obj,t + h, y+ (h*k_3'));
                 % calculate the ynew
-                ynew = y + (((k1'/6) + (k2'/3) + (k3'/3) + (k4'/6)) * h);
+                ynew = y + (((k_1'/6) + (k_2'/3) + (k_3'/3) + (k_4'/6)) * h);
 
                 t = t + h;
                 y = ynew;
